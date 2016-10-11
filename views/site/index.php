@@ -4,11 +4,16 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\UserInfoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+$query = yii\helpers\Html::decode($query);
 $this->title = Yii::t('app', 'User Infos');
-$this->params['breadcrumbs'][] = $this->title;
+if($query != "") {
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'User Infos'), 'url' => ['site/index']];
+    $this->params['breadcrumbs'][] = "Kết quả tìm kiếm cho \"$query\"";
+} else {
+    $this->params['breadcrumbs'][] = $this->title;
+}
 ?>
 <div class="user-info-index">
 
