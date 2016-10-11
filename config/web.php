@@ -46,6 +46,7 @@ $config = [
             ],
         ],
         */
+        'search' => require(__DIR__ . '/search.php'),
     ],
     'params' => $params,
 ];

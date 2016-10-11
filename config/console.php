@@ -21,6 +21,7 @@ $config = [
             ],
         ],
         'db' => $db,
+        'search' => require(__DIR__ . '/search.php'),
     ],
     'params' => $params,
     /*
