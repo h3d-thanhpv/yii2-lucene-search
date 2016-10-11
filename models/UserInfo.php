@@ -19,11 +19,11 @@ class UserInfo extends base\UserInfo
                     /** @var self $model */
                     return [
                         ['name' => 'ID', 'value' => $model->id, 'type' => SearchBehavior::FIELD_UNINDEXED],
-                        ['name' => 'USER_NAME', 'value' => $model->user_name, 'type' => SearchBehavior::FIELD_KEYWORD],
-                        ['name' => 'FIRST_NAME', 'value' => $model->first_name, 'type' => SearchBehavior::FIELD_KEYWORD],
-                        ['name' => 'LAST_NAME', 'value' => $model->last_name, 'type' => SearchBehavior::FIELD_KEYWORD],
-                        ['name' => 'EMAIL', 'value' => $model->email, 'type' => SearchBehavior::FIELD_KEYWORD],
-                        ['name' => 'GENDER', 'value' => $model->gender, 'type' => SearchBehavior::FIELD_KEYWORD],
+                        ['name' => 'USER_NAME', 'value' => $model->user_name, 'type' => SearchBehavior::FIELD_TEXT],
+                        ['name' => 'FIRST_NAME', 'value' => $model->first_name, 'type' => SearchBehavior::FIELD_TEXT],
+                        ['name' => 'LAST_NAME', 'value' => $model->last_name, 'type' => SearchBehavior::FIELD_TEXT],
+                        ['name' => 'EMAIL', 'value' => $model->email, 'type' => SearchBehavior::FIELD_TEXT],
+                        ['name' => 'GENDER', 'value' => $model->gender, 'type' => SearchBehavior::FIELD_TEXT],
                         ['name' => 'CREATE_DATE', 'value' => $model->create_date, 'type' => SearchBehavior::FIELD_KEYWORD],
                         ['name' => 'COMPANY', 'value' => $model->company, 'type' => SearchBehavior::FIELD_TEXT],
                         ['name' => 'USER_AGENT', 'value' => $model->user_agent, 'type' => SearchBehavior::FIELD_TEXT],
