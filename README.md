@@ -28,7 +28,9 @@ yii migrate
 
 ### 3. Indexing query data
 
-TODO
+```
+yii search/index
+```
 
 # Usage
 
