@@ -20,7 +20,11 @@ return [
 
 ### 2. Run migration
 
-TODO
+Open terminal and run this command on root app folder
+ 
+```
+yii migrate
+```
 
 ### 3. Indexing query data
 
