@@ -7,9 +7,9 @@ use yii\widgets\Pjax;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $query = yii\helpers\Html::decode($query);
-$this->title = Yii::t('app', 'User Infos');
+$this->title = Yii::t('app', 'List Users');
 if($query != "") {
-    $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'User Infos'), 'url' => ['site/index']];
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'List Users'), 'url' => ['site/index']];
     $this->params['breadcrumbs'][] = "Kết quả tìm kiếm cho \"$query\"";
 } else {
     $this->params['breadcrumbs'][] = $this->title;
@@ -22,10 +22,14 @@ if($query != "") {
         <div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 col-sm-7 col-sm-offset-5 col-xs-12">
             <?= Html::beginForm(\yii\helpers\Url::to(['site/index']), 'get', ['class' => 'form-inline']) ?>
             <div class="input-group pull-right col-lg-10 col-md-11 col-sm-12">
-                <?= Html::textInput('q', $query, ['class' => 'form-control', 'id' => 'advanced-search', 'placeholder' => 'Tìm kiếm nâng cao']) ?>
+                <?= Html::textInput('q', $query, [
+                    'class' => 'form-control',
+                    'id' => 'advanced-search',
+                    'placeholder' => 'Advanced search'
+                ]) ?>
                 <span class="input-group-btn">
-                <?= Html::submitButton('<i class="glyphicon glyphicon-search"></i>', ['class' => 'btn btn-primary']) ?>
-            </span>
+                    <?= Html::submitButton('<i class="glyphicon glyphicon-search"></i>', ['class' => 'btn btn-primary']) ?>
+                </span>
             </div><!-- /input-group -->
             <?= Html::endForm() ?>
         </div>
