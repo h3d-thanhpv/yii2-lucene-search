@@ -26,15 +26,30 @@ Open terminal and run this command on root app folder
 yii migrate
 ```
 
-### 3. Indexing query data
+### 3. Indexing and Optimizing query data
 
 ```
 yii search/index
+
+yii search/optimize
 ```
 
 # Usage
 
-TODO
+Go to homepage and test with some query like that:
+```
+CREATE_DATE:[20160501 TO 20170101]
+
+USER_NAME=dclark
+
+USER_NAME=dclark and FIRST_NAME=Donna
+
+USER_NAME=dclark and USER_AGENT=Chrome
+
+USER_NAME:D*a AND GENDER:Male
+
+USER_NAME:D*a AND COMPANY:Y*
+```
 
 # Reference
 [https://framework.zend.com/manual/1.12/en/zend.search.lucene.html](https://framework.zend.com/manual/1.12/en/zend.search.lucene.html)
