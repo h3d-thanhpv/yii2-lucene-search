@@ -3,7 +3,6 @@
 namespace app\controllers;
 
 use app\models\UserInfo;
-use app\models\UserInfoSearch;
 use himiklab\yii2\search\Search;
 use Yii;
 use yii\data\ActiveDataProvider;
@@ -13,7 +12,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use ZendSearch\Lucene\Analysis\Analyzer\Analyzer;
-use ZendSearch\Lucene\Analysis\Analyzer\Common\Utf8Num\CaseInsensitive;
+use ZendSearch\Lucene\Analysis\Analyzer\Common\TextNum\CaseInsensitive;
 
 class SiteController extends Controller
 {

@@ -24,7 +24,7 @@ class UserInfo extends base\UserInfo
                         ['name' => 'LAST_NAME', 'value' => $model->last_name, 'type' => SearchBehavior::FIELD_TEXT],
                         ['name' => 'EMAIL', 'value' => $model->email, 'type' => SearchBehavior::FIELD_TEXT],
                         ['name' => 'GENDER', 'value' => $model->gender, 'type' => SearchBehavior::FIELD_TEXT],
-                        ['name' => 'CREATE_DATE', 'value' => $model->create_date, 'type' => SearchBehavior::FIELD_KEYWORD],
+                        ['name' => 'CREATE_DATE', 'value' => date_format(date_create($model->create_date), "Ymd"), 'type' => SearchBehavior::FIELD_KEYWORD],
                         ['name' => 'COMPANY', 'value' => $model->company, 'type' => SearchBehavior::FIELD_TEXT],
                         ['name' => 'USER_AGENT', 'value' => $model->user_agent, 'type' => SearchBehavior::FIELD_TEXT],
                     ];
