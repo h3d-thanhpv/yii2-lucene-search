@@ -40,6 +40,18 @@ if($query != "") {
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 //            'id',
+            [
+                'label' => 'Avatar',
+                'attribute' => 'avatar',
+                'value' => function ($model) {
+                    /** @var \app\models\UserInfo $model */
+                    return Html::img($model->avatar, [
+                        'alt' => $model->first_name . " " . $model->last_name,
+                    ]);
+                },
+                'format' => 'html',
+                'enableSorting' => false,
+            ],
             'user_name',
             'first_name',
             'last_name',
